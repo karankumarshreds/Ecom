@@ -1,11 +1,17 @@
 import React from 'react';
-import Header from './Header/Header';
+
+import Header from './Header';
+// pages
+import HomePage from '../pages/HomePage';
 
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-    </div>
+      <div className="App">
+        <HomePage />
+      </div>
+    </React.Fragment>
   );
 };
 

@@ -11,6 +11,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
   line-height: 1;
+  h1 {
+    font-size: 5rem !important;
+  }
 }
 
 *,
@@ -21,4 +24,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.App {
+  max-width: 1450px;
+  padding: 0 10px;
+  margin: 0 auto;
+  // height: 100%;
 }

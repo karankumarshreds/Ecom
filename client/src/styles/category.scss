@@ -1,0 +1,42 @@
+.Category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__men,
+  &__women {
+    position: relative;
+    height: 65rem;
+    width: 45rem;
+    margin: 2rem 0;
+    overflow: hidden;
+    a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      padding: 1rem;
+      background: white;
+      border: 1px solid black;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  .img_div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+    }
+  }
+}
