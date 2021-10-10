@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './Header';
+import Header from './Header/Header';
 // pages
 import HomePage from '../pages/HomePage';
 
