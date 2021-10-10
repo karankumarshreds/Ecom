@@ -1,13 +1,35 @@
 header {
-  height: 7rem;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   .wrapper {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    height: 7rem;
     padding: 0.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     .logo {
-      width: 10rem;
+      width: 6rem !important;
       display: flex;
       justify-content: flex-start;
       align-items: center;
+    }
+    .buttons {
+      a {
+        color: $almost-black;
+        font-weight: 300;
+        margin-left: 2rem;
+        &:hover {
+          color: $black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .wrapper {
+      padding: 0.5rem 1rem;
+      .logo {
+        width: 5rem !important;
+      }
     }
   }
 }

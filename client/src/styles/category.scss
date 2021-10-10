@@ -7,9 +7,9 @@
   &__men,
   &__women {
     position: relative;
-    height: 65rem;
-    width: 45rem;
-    margin: 2rem 0;
+    height: 100vh;
+    width: 50%;
+    margin-bottom: 2rem;
     overflow: hidden;
     a {
       position: absolute;
@@ -26,6 +26,15 @@
         background: #000;
         color: #fff;
         cursor: pointer;
+      }
+    }
+    @media screen and (max-width: 760px) {
+      & {
+        width: 100%;
+        height: 70vh;
+      }
+      a {
+        font-size: 1.8rem;
       }
     }
   }
