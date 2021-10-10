@@ -1,6 +1,6 @@
 import React from 'react';
-import Men from '../../assets/menCategory.jpg';
-import Women from '../../assets/womenCategory.jpg';
+import Men from '../../../../assets/menCategory.jpg';
+import Women from '../../../../assets/womenCategory.jpg';
 
 const Category = () => {
   return (
