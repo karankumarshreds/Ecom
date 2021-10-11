@@ -13,7 +13,9 @@ const App = () => {
   React.useEffect(() => {
     auth.onAuthStateChanged(async (userData) => {
       const handled = await handleUserProfile(userData);
+      console.log('handled', handled);
       if (handled) {
+        console.log('setting user state');
         setUser({ ...userData });
       }
     });

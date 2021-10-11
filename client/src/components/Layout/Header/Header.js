@@ -4,6 +4,7 @@ import { auth } from '../../../config/utils';
 import logo from '../../../assets/logo.png';
 
 const Header = ({ user }) => {
+  console.log(user);
   return (
     <header>
       <div className="wrapper">
@@ -19,7 +20,7 @@ const Header = ({ user }) => {
           </div>
         ) : (
           <div className="buttons">
-            <Link to="#">👋 Hi {user.username.split(' ')[0]}</Link>
+            <Link to="#">👋 Hi {user.displayName.split(' ')[0]}</Link>
             <Link to="#" onClick={() => auth.signOut()}>
               LOGOUT
             </Link>

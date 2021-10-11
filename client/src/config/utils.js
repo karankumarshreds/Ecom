@@ -46,7 +46,7 @@ export const handleUserProfile = async (userData) => {
         uid: userData.uid,
       });
       handled = true;
-    }
+    } else handled = true;
   } catch (error) {
     console.log(error);
     handled = false;
