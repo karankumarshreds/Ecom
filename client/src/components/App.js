@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { auth } from '../config/utils';
+import { auth, handleUserProfile } from '../config/utils';
 import Header from './Layout/Header/Header';
 // pages
 import HomePage from '../pages/HomePage';
@@ -11,14 +11,10 @@ const App = () => {
   const [user, setUser] = React.useState(null);
 
   React.useEffect(() => {
-    auth.onAuthStateChanged((authenticated) => {
-      if (!authenticated) {
-        setUser(null);
-      } else {
-        setUser({
-          username: authenticated.displayName,
-          id: authenticated.uid,
-        });
+    auth.onAuthStateChanged(async (userData) => {
+      const handled = await handleUserProfile(userData);
+      if (handled) {
+        setUser({ ...userData });
       }
     });
   }, [auth]);

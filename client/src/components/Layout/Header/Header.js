@@ -4,7 +4,6 @@ import { auth } from '../../../config/utils';
 import logo from '../../../assets/logo.png';
 
 const Header = ({ user }) => {
-  console.log(user, '👈');
   return (
     <header>
       <div className="wrapper">
